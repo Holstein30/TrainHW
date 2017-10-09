@@ -67,12 +67,21 @@ database.ref().on("child_added", function (snapshot) {
 
 	console.log(snapshot.val());
 
-	$("#tbody").append("<tr>");
-	$("#tbody").append("<td>" + snapshot.val().name + "</td>");
-	$("#tbody").append("<td>" + snapshot.val().destination + "</td>");
-	$("#tbody").append("<td>" + snapshot.val().frequency + "</td>");
-	$("#tbody").append("<td>" + snapshot.val().arrival + "</td>");
-	$("#tbody").append("<td>" + snapshot.val().away + "</td>");
-	$("#tbody").append("<hr>");
+    var newTR = $("<tr>");
+
+	$("#tbody").append(newTR);
+	newTR.append("<td>" + snapshot.val().name + "</td>");
+	newTR.append("<td>" + snapshot.val().destination + "</td>");
+	newTR.append("<td>" + snapshot.val().frequency + "</td>");
+	newTR.append("<td>" + snapshot.val().arrival + "</td>");
+	newTR.append("<td>" + snapshot.val().away + "</td>");
+	newTR.append("<hr>");
 
 });
+
+// ----- Things to Add -----
+// Create remove and update buttons
+// Change background and other styling
+
+// ----- Known Bugs -----
+// Time doesn't update upon refresh
