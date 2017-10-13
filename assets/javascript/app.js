@@ -137,4 +137,3 @@ setInterval(update, 10000);
 // Change background and other styling
 
 // ----- Known Bugs -----
-// Time doesn't update upon refresh
